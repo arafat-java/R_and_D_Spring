@@ -6,10 +6,12 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class MainProg {
 
 	public static void main(String[] args) {
+
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(HelloWorldConfig.class);
-		
-		HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
-		System.out.println("HelloWorld returned: " + helloWorld.test());
+
+		HelloWorld helloWorldBean = ctx.getBean(HelloWorld.class);
+		System.out.println("HelloWorld - " + helloWorldBean.test());
+
 		((AnnotationConfigApplicationContext)ctx).close();
 	}
 }

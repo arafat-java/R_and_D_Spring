@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class HelloWorldSpringBoot {
 
-    @RequestMapping("/hw") 
+    @RequestMapping("/hw1") 
     String helloWorld() {		// Invoke using http://localhost:8080/hw
     	
         return "!!! Hello World !!!";
